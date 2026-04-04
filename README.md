@@ -214,3 +214,7 @@ col_ref        ::= identifier . identifier | identifier
 **Νικόλαος Γαλάνης** — ΑΜ: 1093337  
 Τμήμα Μηχανικών Η/Υ & Πληροφορικής, Πανεπιστήμιο Πατρών  
 up1093337@ac.upatras.gr
+
+**Nikolaos Galanis** - Student ID Number: 1093337
+Computer Engineering and Informatics Department, University of Patras
+up1093337@ac.upatras.gr
