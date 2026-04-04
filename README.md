@@ -211,8 +211,6 @@ col_ref        ::= identifier . identifier | identifier
 
 ---
 
-## Nikolaos Galanis
-
 **Νικόλαος Γαλάνης** — ΑΜ: 1093337  
 Τμήμα Μηχανικών Η/Υ & Πληροφορικής, Πανεπιστήμιο Πατρών  
 up1093337@ac.upatras.gr
