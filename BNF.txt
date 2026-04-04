@@ -1,0 +1,75 @@
+<program>        ::= <stmts>
+
+<stmts>          ::= <stmt>
+                   | <stmts> <stmt>
+<stmt>           ::= <create_stmt> ;
+                   | <select_stmt> ;
+
+<create_stmt>    ::= CREATE TABLE <identifier> ( <cols> )
+
+<cols>           ::= <col>
+                   | <cols> , <col>
+<col>            ::= <identifier> INT
+                   | <identifier> FLOAT
+                   | <identifier> VARCHAR ( <int_literal> )
+
+<select_stmt>    ::= SELECT <select_list> FROM <table_refs>
+                     <join_part>
+                     <where_part>
+                     <group_by_part>
+                     <order_by_part>
+                     <limit_part>
+<select_list>    ::= *
+                   | <col_refs>
+<table_refs>     ::= <t_ref>
+                   | <table_refs> , <t_ref>
+<t_ref>          ::= <identifier>
+                   | <identifier> AS <identifier>
+
+
+<join_part>      ::= ε
+                   | <join_part> JOIN <t_ref> ON <col_ref> = <col_ref>
+
+<where_part>     ::= ε
+                   | WHERE <condition>
+<condition>      ::= <col_ref> = <expr>
+                   | <col_ref> != <expr>
+                   | <col_ref> > <expr>
+                   | <col_ref> < <expr>
+                   | <col_ref> >= <expr>
+                   | <col_ref> <= <expr>
+                   | <col_ref> IN ( <in_list> )
+                   | <col_ref> NOT IN ( <in_list> )
+                   | <condition> AND <condition>
+                   | <condition> OR <condition>
+                   | NOT <condition>
+                   | ( <condition> )
+<in_list>        ::= <in_list_element>
+                   | <in_list> , <in_list_element>
+<in_list_element>::= <int_literal>
+                   | <float_literal>
+                   | <string_literal>
+<expr>           ::= <int_literal>
+                   | <float_literal>
+                   | <string_literal>
+                   | <col_ref>
+
+<group_by_part>  ::= ε
+                   | GROUP BY <col_refs>
+
+<order_by_part>  ::= ε
+                   | ORDER BY <col_refs>
+
+<limit_part>     ::= ε
+                   | LIMIT <int_literal>
+
+<col_refs>       ::= <col_ref>
+                   | <col_refs> , <col_ref>
+<col_ref>        ::= <identifier> . <identifier>
+                   | <identifier>
+
+
+<identifier>     ::= [a-zA-Z_][a-zA-Z0-9_]*
+<int_literal>    ::= -?[0-9]+
+<float_literal>  ::= -?[0-9]+.[0-9]+
+<string_literal> ::= '[^']*'
