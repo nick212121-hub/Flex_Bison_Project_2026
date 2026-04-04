@@ -215,7 +215,6 @@ col_ref        ::= identifier . identifier | identifier
 Τμήμα Μηχανικών Η/Υ & Πληροφορικής, Πανεπιστήμιο Πατρών  
 up1093337@ac.upatras.gr
 
-**Nikolaos Galanis** - Student ID Number: 1093337
-
-Computer Engineering and Informatics Department, University of Patras
+**Nikolaos Galanis** — Student ID Number: 1093337  
+Computer Engineering and Informatics Department, University of Patras  
 up1093337@ac.upatras.gr
