@@ -324,7 +324,10 @@ col_ref: IDENTIFIER DOT IDENTIFIER
 
 %%
 
+int lexical_error = 0;
+
 void yyerror(const char *s) {
+    if(lexical_error) return;
     fprintf(stderr, "\n[!] Syntax Error at line %d (near '%s')\n", line_num, yytext);
 }
 

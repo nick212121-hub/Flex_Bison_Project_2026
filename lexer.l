@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include "parser.tab.h"
 int line_num = 1;
+extern int lexical_error;
 %}
 
 %option noyywrap
@@ -61,5 +62,5 @@ int line_num = 1;
 "--".*      { printf("%s", yytext); }
 [ \t\r]+    { printf("%s", yytext); }
 \n          { printf("\n"); line_num++; }
-.           { printf("\nLexical Error at line %d: %s\n", line_num, yytext); }
+. { printf("\nLexical Error at line %d: %s\n", line_num, yytext); lexical_error = 1; exit(1); }
 %%
