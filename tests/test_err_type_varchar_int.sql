@@ -6,5 +6,4 @@ CREATE TABLE Items (
     name     varchar(50)
 );
 
--- Αυτό πρέπει να βγάλει SEMANTIC ERROR (name είναι VARCHAR, όχι INT)
 SELECT * FROM Items WHERE name = 42;

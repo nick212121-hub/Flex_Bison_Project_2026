@@ -6,5 +6,4 @@ CREATE TABLE Products (
     name varchar(50)
 );
 
--- Αυτό πρέπει να βγάλει SEMANTIC ERROR (NonExistent δεν έχει γίνει CREATE)
 SELECT * FROM NonExistent;

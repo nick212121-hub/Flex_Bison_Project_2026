@@ -6,5 +6,4 @@ CREATE TABLE Tags (
     tag_name varchar(5)
 );
 
--- Αυτό πρέπει να βγάλει SEMANTIC ERROR ('toolong' = 7 chars > 5)
 SELECT * FROM Tags WHERE tag_name = 'toolong';

@@ -6,5 +6,4 @@ CREATE TABLE Cars (
     brand  varchar(30)
 );
 
--- Αυτό πρέπει να βγάλει SEMANTIC ERROR (horsepower δεν υπάρχει)
 SELECT car_id, horsepower FROM Cars;

@@ -6,5 +6,4 @@ CREATE TABLE Sales (
     region  varchar(30)
 );
 
--- Αυτό πρέπει να βγάλει SEMANTIC ERROR (amount δεν υπάρχει)
 SELECT * FROM Sales ORDER BY amount;

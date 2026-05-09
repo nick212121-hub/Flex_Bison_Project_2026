@@ -6,7 +6,6 @@ CREATE TABLE Users (
     username varchar(30)
 );
 
--- Αυτό πρέπει να βγάλει SEMANTIC ERROR
 CREATE TABLE Users (
     email varchar(100)
 );

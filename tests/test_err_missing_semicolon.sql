@@ -6,5 +6,4 @@ CREATE TABLE Users (
     name    varchar(30)
 )
 
--- Λείπει το ; παραπάνω - πρέπει να βγάλει SYNTAX ERROR
 SELECT * FROM Users;

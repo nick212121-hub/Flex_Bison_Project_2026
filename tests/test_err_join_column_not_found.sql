@@ -11,6 +11,5 @@ CREATE TABLE Customers (
     cust_name   varchar(50)
 );
 
--- Αυτό πρέπει να βγάλει SEMANTIC ERROR (nonexistent_col δεν υπάρχει)
 SELECT * FROM Orders AS o
 JOIN Customers AS c ON o.nonexistent_col = c.customer_id;

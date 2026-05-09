@@ -5,6 +5,4 @@ CREATE TABLE Cars (
     car_id int,
     brand  varchar(30)
 );
-
--- Αυτό πρέπει να βγάλει SEMANTIC ERROR (horsepower δεν υπάρχει)
 SELECT * FROM Cars WHERE horsepower > 100;

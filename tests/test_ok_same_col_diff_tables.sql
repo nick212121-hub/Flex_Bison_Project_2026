@@ -11,6 +11,5 @@ CREATE TABLE TableB (
     name varchar(50)
 );
 
--- Και οι δύο πίνακες έχουν id και name - πρέπει να είναι ΕΓΚΥΡΟ
 SELECT * FROM TableA;
 SELECT * FROM TableB;

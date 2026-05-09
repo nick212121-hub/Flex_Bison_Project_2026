@@ -6,5 +6,4 @@ CREATE TABLE Products (
     name       varchar(50)
 );
 
--- Αυτό πρέπει να βγάλει SEMANTIC ERROR (product_id είναι INT, 'abc' είναι string)
 SELECT * FROM Products WHERE product_id IN (1, 2, 'abc');

@@ -6,7 +6,6 @@ CREATE TABLE Measurements (
     value      float
 );
 
--- Και τα δύο πρέπει να είναι ΕΓΚΥΡΑ
 SELECT * FROM Measurements WHERE value > 10;
 
 SELECT * FROM Measurements WHERE value > 10.5;
